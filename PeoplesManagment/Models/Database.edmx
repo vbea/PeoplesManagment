@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VillageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Peoples">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="usedname" Type="varchar" MaxLength="50" />
+          <Property Name="gender" Type="int" />
+          <Property Name="birthday" Type="varchar" MaxLength="10" />
+          <Property Name="nation" Type="varchar" MaxLength="20" />
+          <Property Name="political" Type="varchar" MaxLength="10" />
+          <Property Name="idcard" Type="varchar" MaxLength="18" Nullable="false" />
+          <Property Name="natives" Type="varchar" MaxLength="50" />
+          <Property Name="populate" Type="int" />
+          <Property Name="address" Type="varchar" MaxLength="50" />
+          <Property Name="military" Type="varchar" MaxLength="50" />
+          <Property Name="marriage" Type="varchar" MaxLength="10" />
+          <Property Name="education" Type="varchar" MaxLength="20" />
+          <Property Name="phone" Type="varchar" MaxLength="15" />
+          <Property Name="photo" Type="varchar" MaxLength="50" />
+          <Property Name="ftype" Type="varchar" MaxLength="10" />
+          <Property Name="fid" Type="int" />
+          <Property Name="fship" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="VillageModelStoreContainer">
+          <EntitySet Name="Peoples" EntityType="Self.Peoples" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VillageModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="VillageInfoEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="Peoples" EntityType="VillageModel.Peoples" />
+        </EntityContainer>
+        <EntityType Name="Peoples">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="usedname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gender" Type="Int32" />
+          <Property Name="birthday" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="nation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="political" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="idcard" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Name="natives" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="populate" Type="Int32" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="military" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="marriage" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="education" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="photo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ftype" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="fid" Type="Int32" />
+          <Property Name="fship" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VillageModelStoreContainer" CdmEntityContainer="VillageInfoEntities" >
+          <EntitySetMapping Name="Peoples">
+            <EntityTypeMapping TypeName="VillageModel.Peoples">
+              <MappingFragment StoreEntitySet="Peoples">
+                <ScalarProperty Name="fship" ColumnName="fship" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="ftype" ColumnName="ftype" />
+                <ScalarProperty Name="photo" ColumnName="photo" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="education" ColumnName="education" />
+                <ScalarProperty Name="marriage" ColumnName="marriage" />
+                <ScalarProperty Name="military" ColumnName="military" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="populate" ColumnName="populate" />
+                <ScalarProperty Name="natives" ColumnName="natives" />
+                <ScalarProperty Name="idcard" ColumnName="idcard" />
+                <ScalarProperty Name="political" ColumnName="political" />
+                <ScalarProperty Name="nation" ColumnName="nation" />
+                <ScalarProperty Name="birthday" ColumnName="birthday" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="usedname" ColumnName="usedname" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

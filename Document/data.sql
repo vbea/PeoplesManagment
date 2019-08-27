@@ -1,7 +1,7 @@
 create database VillageInfo
 use VillageInfo
 go
-create table Pepoles (
+create table Peoples (
 	id int primary key identity(1,1),
 	username varchar(40) not null, --ĞÕÃû
 	usedname varchar(50) null, --ÔøÓÃÃû

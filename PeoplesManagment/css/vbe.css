@@ -1,0 +1,58 @@
+﻿* {
+    outline: none;
+}
+
+.header {
+    width: 100vw;
+    height: 15.6vw;  
+    background: url(/images/bg-top.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.header .navbar {
+    width: 100%;
+    display: flex;
+    bottom: 0; 
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+}
+
+.navbar a {
+    display: block;
+    padding: 10px 15px;
+    background: #ff7400;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .4s;
+}
+
+.navbar a:hover {
+    background: #ea2d01;
+}
+
+td {
+    white-space: nowrap;
+}
+
+.ui-flex {
+    display: flex;
+}
+
+.ui-flex.c {
+    align-items: center;
+}
+
+.ui-flex-1 {
+    flex: 1;
+}
+
+.input-search {
+    font-size: 14px;
+    padding: 6px 14px;
+    border: 1px solid #eee;
+    border-radius: 30px;
+}

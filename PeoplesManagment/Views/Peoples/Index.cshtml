@@ -1,0 +1,50 @@
+﻿@model IEnumerable<PeoplesManagment.Models.Peoples>
+@{
+    ViewBag.Title = "村级人口管理系统";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+<div class="ui-flex c">
+    <h3 class="ui-flex-1">丁家沟村全村农户列表</h3>
+    <input class="input-search" placeholder="搜索" />
+    <i class="mdui-icon material-icons">search</i>
+</div>
+<div class="mdui-table-fluid">
+<table class="mdui-table mdui-table-hoverable">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>姓名</th>
+            <th>曾用名</th>
+            <th>性别</th>
+            <th>出生日期</th>
+            <th>民族</th>
+            <th>政治面貌</th>
+            <th>身份证</th>
+            <th>人口</th>
+            <th>籍贯</th>
+            <th>家庭住址</th>
+            <th>兵役状况</th>
+            <th>婚姻状况</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.id</td>
+            <td>@item.username</td>
+            <td>@item.usedname</td>
+            <td>@item.gender</td>
+            <td>@item.birthday</td>
+            <td>@item.nation</td>
+            <td>@item.political</td>
+            <td>@item.idcard</td>
+            <td>@item.populate</td>
+            <td>@item.natives</td>
+            <td>@item.address</td>
+            <td>@item.military</td>
+            <td>@item.marriage</td>
+        </tr>
+    }
+</table>
+</div>
+
